@@ -1,88 +1,62 @@
-# Aula 01 — Introdução ao Desenvolvimento Web
+# Aula 1
 
-Na primeira aula da disciplina, foi apresentado o **Plano de Ensino do semestre**, com a organização geral da matéria, objetivos de aprendizagem, metodologia, conteúdos que serão abordados e critérios de avaliação.
+## Introdução ao Desenvolvimento Web
 
-Em seguida, houve uma **introdução ao Desenvolvimento Web**, contextualizando a área e os principais conceitos que serão trabalhados ao longo do semestre.
+### Arquitetura de um Site
 
----
+A arquitetura de um site é como um site é organizado estruturalmente, entre páginas, menus, categorias e fluxos. Dessa forma, contruindo-se uma interface que favorece o usuário. Para isso, é importante definir alguns termos, dos quais são fundamentais para arquitetar um site, sendo eles:
 
-## Arquitetura de um Site e Planejamento de Projetos
+- **Escopo**: Projetação e definção do que o projeto vai ter ou não. Exemplos: objetivo, funcionalidades, público alvo e restrições que delimitam o que pode ser feito.
 
-Foram abordados os fundamentos da **arquitetura de um site**, destacando as etapas essenciais para a produção de um projeto web:
+- **Prototipação**: Simulação do site e suas funcionalidades antes do desenvolvimento técnico. Servindo para testar ideias, validar layouts e estabelecer um bom fluxo. 
 
-- Definição de escopo e arquitetura do projeto  
-- Importância do planejamento no desenvolvimento web  
-- Relação entre arquitetura do site e UX/UI  
-- Validação de ideias  
-- Refinamento de usabilidade  
-- Processo de iteração contínua  
-- Uso de ferramentas de prototipação para planejamento e desenvolvimento  
+- **UX (User Experience)**: Estabelececimento de um conjunto de elementos e estratégias para aprimorar a experiência do usuário. Bucando uma navegação intuitiva, eficiente e agradável.
 
----
+### Versionamento e Deploy
 
-## Versionamento e Deploy
+- **Versionamento**: Registros das alterações feitas ao longo do tempo no projeto, chamado também de "controle de versões". Se faz muito importante para permitir um trabalho em equipe mais eficiente através do uso de branches (ramificações). Também, permite o acesso a versões específicas, servindo até mesmo como um "backup", dando espaço para testes que não comprometam o projeto como um todo. A ferramenta mais utilizada para isso é o Git, o qual faz o gerenciamento para o upload do projeto em plataformas como o GitHub, GitLav e BitBucket.
 
-Foi feita uma introdução aos conceitos de **versionamento de código** e **deploy**, fundamentais no desenvolvimento web moderno:
+- **Deploy**: Processo de implantação da aplicação em um ambiente acessível aos usuários finais. Os deploys podem ser feitos de forma manual ou automatizados. Quando feito de forma automatizada, a publicação da aplicação é feita juntamente ao "push" do projeto à ramificação principal (main). Ferramentas de automação como CI (Continuous Integration) e CD (Continuous Delivery) garantem que haja uma verificação de erros, validação da build a atualização automática do projeto. Ferramentas comuns utlizadas para deploy são: GitHub Actions, GitLab CI, Jenkins e Docker.
 
-- Controle de versões para registrar alterações no código  
-- Trabalho colaborativo em equipe  
-- Criação de ramificações (branches) para desenvolvimento paralelo  
-- Importância do versionamento para organização e manutenção de projetos  
-- Conceito de deploy e implantação de aplicações em ambientes de produção  
-- Noções iniciais sobre automação e boas práticas (CI/CD)  
+- **Monitoramento**: Após o deploy há a necessidade de monitoramento de parâmetros como performance, bugs, consumo de hardware, logs e tempo de resposta. Para isso exitem ferramentas como Datadog e New Relic.
 
----
+- **Boas Práticas**:
+    - Separar ambientes
+    - Nunca testar direto em produção.
+    - Nunca fazer deploy direto na main sem revisão
+    - Usar Pull Requests
+    - Automatizar testes
+    - Monitorar após deploy
+    - Ter plano de rollback
 
-## Tecnologias do Ecossistema Web
+### Introdução ao JavaScript
 
-A aula apresentou uma visão geral sobre as principais tecnologias utilizadas no desenvolvimento web:
+JavaScript é uma linguagem de programação interpretada, criada para tornar páginas web dinâmicas e interativas. Está presente em praticamente toda aplicação moderna atual, devido seu alto poder de manipulação de interface, comunicação com os servidores e APIs.
 
-### JavaScript (Vanilla JS)
-- Linguagem essencial no desenvolvimento front-end  
-- Permite criar interatividade nas páginas  
-- Base para diversos frameworks e bibliotecas  
+- **Vanilla JS**: É o JavaScript puro, sem dependencias externas.
 
-### Frameworks Front-end
-- Conceito de frameworks e bibliotecas  
-- Noções iniciais sobre componentização  
-- Organização do código e reutilização de componentes  
-- Gerenciamento de estado, rotas e integração com APIs  
+#### Frameworks
 
-### Frameworks Back-end
-- Conceito e papel do back-end em aplicações web  
-- Noções de arquitetura de software (ex: MVC e APIs REST)  
-- Integração com banco de dados e autenticação de usuários  
+Framework é uma estrutura pronta de desenvolvimento, a qual provê organização, padronização de código, ferramentas integradas, boas práticas e bibliotecas embutidas.
 
----
+- **Frameworks Front-End**: Responsáveis pelo setor que é executado no navegador do usuário. Exemplos: React, Vue.js e Angular.
 
-## Banco de Dados NoSQL
+- **Frameworks Back-End**: Responsáveis pelo setor que é executado no servidor. Exemplos: Express.js e NestJS.
 
-Foram apresentados conceitos iniciais sobre **bancos de dados NoSQL**:
+    - Website Builders: São ferramentas que permitem criar sites sem a necessidade de codificação manual. Facilitam o desenvovimento, mas limitam a flexibilidade.
 
-- Bancos não relacionais  
-- Estruturas flexíveis (schema dinâmico)  
-- Capacidade de escalabilidade horizontal  
-- Uso em aplicações modernas que demandam alto volume de dados  
+### Servidores e Hospedagem / CMS
 
----
+- **Servidor**: É um computador (físico ou virtual) que, armazena arquivos do site, processa requisições e responde usuários via internet.
+    - **Servidor Web**: Responsável por entregar arquivos. Exemplo: Apache HTTP Server.
+    - **Servidor de Aplicação**: Processa lógica (Node, PHP, Python etc.). Exemplo: Node.js.
+    - **Servidor de Banco de Dados**: Armazena dados estruturados. Exemplo: MySQL.
 
-## CMS, Hospedagem e Website Builders
+- **Hospedagem**: É o serviço que disponibiliza servidores para seu site ficar online.
+    - **Cloud Hosting**: Infraestrutura escalável sob demanda. Exemplos: Amazon Web Services, Google Cloud e Microsoft Azure.
 
-Também foram discutidas alternativas para criação de sites sem codificação intensiva:
+- **CMS**: É um sistema que permite criar e gerenciar conteúdo sem precisar programar. Fornece: painel administrativo, editor de páginas, sistema de usuários, plugins e temas. O mais utilizado no mundo é o WordPress.
 
-- Conceito de CMS (Sistemas de Gerenciamento de Conteúdo)  
-- Criação e gerenciamento de sites com ferramentas prontas  
-- Website builders e suas vantagens:
-  - Facilidade de uso  
-  - Rapidez no desenvolvimento  
-  - Templates prontos  
-- Limitações:
-  - Menor flexibilidade  
-  - Possíveis impactos de performance  
-  - Dificuldade de migração para outras plataformas  
+### Bancos de dados NoSQL
 
----
-
-## Conclusão
-
-A primeira aula apresentou uma **visão geral do Desenvolvimento Web**, abordando desde o planejamento de projetos e arquitetura de sites até conceitos iniciais sobre tecnologias, versionamento, deploy, bancos de dados e ferramentas modernas.
+Bancos de dados NoSQL são não-relacionais, ou seja, não seguem o modelo de tabelas fixas e não dependem exclusivamente do SQL. Dessa forma, permitem interações dinâmicas e armazenamento de uma variedade de dados. Além disso, apresenta escalabilidade horizontal, fazendo com que os dados possam ser distribuídos em múltiplos servidores.
